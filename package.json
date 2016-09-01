@@ -10,11 +10,11 @@
     "email": "pleerock.me@gmail.com"
   },
   "scripts": {
+    "prestart": "typings install",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
     "lite": "lite-server -c bs-config.json",
     "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "postinstall": "typings install"
+    "tsc:w": "tsc -w"
   },
   "repository": {
     "type": "git",
