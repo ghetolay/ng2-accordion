@@ -4,9 +4,18 @@ import { BrowserModule  } from "@angular/platform-browser";
 import { Sample1App } from "./app.component";
 import { AccordionModule } from "../../src/index";
 
+
 @NgModule({
-    imports:       [ BrowserModule, AccordionModule ],
-    declarations:  [ Sample1App,  ],
-    bootstrap:     [ Sample1App ]
+    imports: [
+        BrowserModule,
+        AccordionModule
+    ],
+    declarations: [
+        Sample1App
+    ],
+    bootstrap: [
+        Sample1App
+    ]
 })
-export class SampleAppModule {}
+export class SampleAppModule {
+}

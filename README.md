@@ -27,6 +27,8 @@ or create an issue if you have problems with it.
 
 ## Usage
 
+Import `AccordionModule` in your app and start using component:
+
 ```typescript
 <accordion [showArrows]="true" [closeOthers]="false" [expandAll]="true">
     <accordion-group heading="Accordion heading">
@@ -65,7 +67,7 @@ or create an issue if you have problems with it.
 
 ```typescript
 import {Component} from "@angular/core";
-import {ACCORDION_DIRECTIVES} from "ng2-accordion";
+import {AccordionModule} from "ng2-accordion";
 
 @Component({
     selector: "app",
@@ -187,10 +189,25 @@ import {ACCORDION_DIRECTIVES} from "ng2-accordion";
     </accordion>
 
 </div>
-`,
-    directives: [ACCORDION_DIRECTIVES]
+`
 })
 export class App {
+
+}
+
+@NgModule({
+    imports: [
+        // ...
+        AccordionModule
+    ],
+    declarations: [
+        App
+    ],
+    bootstrap: [
+        App
+    ]
+})
+export class AppModule {
 
 }
 ```
@@ -199,6 +216,12 @@ Take a look on samples in [./sample](https://github.com/pleerock/ng2-accordion/t
 usages.
 
 ## Release notes
+
+**0.0.9**
+* angular rc.6 support
+
+**0.0.8**
+* angular rc.5 support
 
 **0.0.7**
 * angular rc.2 support. Use older versions if you still using rc1.
